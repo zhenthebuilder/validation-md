@@ -1,0 +1,20 @@
+{
+  "name": "validation-md",
+  "interface": {
+    "displayName": "validation-md"
+  },
+  "plugins": [
+    {
+      "name": "validation-md",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

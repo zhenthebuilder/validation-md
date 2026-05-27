@@ -1,0 +1,12 @@
+{
+  "name": "validation-md",
+  "description": "Make done a checkable state with repo-local VALIDATION.md files.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zhen Li"
+  },
+  "license": "MIT",
+  "keywords": ["agents", "validation", "claude-code", "definition-of-done"],
+  "skills": ["./skills/validation"],
+  "hooks": "./hooks/hooks.json"
+}

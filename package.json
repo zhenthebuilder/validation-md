@@ -1,0 +1,35 @@
+{
+  "name": "validation-md",
+  "version": "0.1.0",
+  "description": "Make done checkable with repo-local VALIDATION.md files.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "validation-md": "./bin/validation-md.mjs"
+  },
+  "scripts": {
+    "check": "npm run check:syntax && node --test",
+    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs",
+    "test": "npm run check"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    ".agents/",
+    ".claude-plugin/",
+    ".codex-plugin/",
+    "hooks/",
+    "skills/",
+    "examples/",
+    "VALIDATION.md",
+    "README.md",
+    "CLAUDE.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "validation-md",
+  "owner": {
+    "name": "zhenthebuilder"
+  },
+  "metadata": {
+    "description": "Make done a checkable state with repo-local VALIDATION.md files.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "validation-md",
+      "source": "./",
+      "description": "Define and run repo-local validation checks before an agent claims completion.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Zhen Li"
+      },
+      "keywords": ["agents", "validation", "claude-code", "definition-of-done"],
+      "category": "workflow"
+    }
+  ]
+}

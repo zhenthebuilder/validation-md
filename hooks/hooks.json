@@ -1,0 +1,16 @@
+{
+  "description": "Optional Validation.md Stop hook. Inactive until hook mode is enabled.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/validation-stop-hook.mjs\"",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}

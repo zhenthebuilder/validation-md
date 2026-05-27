@@ -1,0 +1,29 @@
+{
+  "name": "validation-md",
+  "version": "0.1.0",
+  "description": "Make done a checkable state with repo-local VALIDATION.md files.",
+  "author": {
+    "name": "Zhen Li",
+    "url": "https://github.com/zhenthebuilder"
+  },
+  "homepage": "https://github.com/zhenthebuilder/validation-md",
+  "repository": "https://github.com/zhenthebuilder/validation-md",
+  "license": "MIT",
+  "keywords": ["agents", "validation", "codex", "claude-code", "definition-of-done"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "validation-md",
+    "shortDescription": "Define and run repo-local completion checks for agent tasks.",
+    "longDescription": "validation-md lets humans and agents share a small VALIDATION.md definition of done before an agent claims completion.",
+    "developerName": "Zhen Li",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/zhenthebuilder/validation-md",
+    "defaultPrompt": [
+      "Create a VALIDATION.md for this task.",
+      "Run validation before claiming done.",
+      "Add a writing judge for this draft."
+    ],
+    "brandColor": "#16A34A"
+  }
+}

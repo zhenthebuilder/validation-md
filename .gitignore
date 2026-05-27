@@ -1,0 +1,5 @@
+node_modules/
+.validation-md/
+.DS_Store
+*.log
+.tmp/
