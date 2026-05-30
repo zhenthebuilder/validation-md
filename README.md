@@ -139,6 +139,18 @@ judges:
     run: validation-md lint-writing draft.md --max-contrastive 1
 ```
 
+Use a separate reviewer agent behind a command:
+
+```yaml
+judges:
+  - id: code_review
+    run: ./scripts/review-with-agent.sh
+```
+
+The protocol should eventually make reviewer agents, code reviewers, and other
+semantic judges easier to define directly. For now, any reviewer that can return
+a process exit code can be used as a `run` judge.
+
 See [`examples/`](examples/) for complete files.
 
 ## Current Surface
@@ -169,6 +181,10 @@ failure.
 This is an early exploration of a small protocol for agent validation. The useful
 part is the convention: define completion in a file, run it explicitly, and turn
 on hook mode only when a task needs a hard gate.
+
+Longer term, teams should be able to publish and reuse judge packs: UI review,
+code review, research review, writing voice, release readiness, and other
+definitions of done.
 
 Contributions are welcome.
 
