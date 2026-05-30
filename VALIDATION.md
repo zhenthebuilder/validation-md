@@ -32,6 +32,9 @@ judges:
   - id: examples_documented
     exists: examples/README.md
 
+  - id: diagram_exists
+    exists: docs/assets/every-agent-needs-a-judge.svg
+
   - id: not_ai_writing_example_exists
     exists: examples/not-ai-writing.VALIDATION.md
 ```

@@ -1,0 +1,59 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F7F5F0"/>
+  <rect x="56" y="52" width="1488" height="796" rx="28" fill="#FFFDF8" stroke="#E3DCD0" stroke-width="2"/>
+
+  <text x="104" y="132" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Every Agent Needs a Judge</text>
+  <text x="108" y="184" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="28">The worker can propose done. The judge decides whether it counts.</text>
+
+  <g transform="translate(104 290)">
+    <rect width="360" height="210" rx="22" fill="#EEF4FF" stroke="#2563EB" stroke-width="4"/>
+    <text x="34" y="60" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">WORKER</text>
+    <text x="34" y="116" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">does the work</text>
+    <text x="34" y="163" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="24">writes code, docs, reports</text>
+  </g>
+
+  <path d="M504 395H590" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <path d="M590 395L564 379V411L590 395Z" fill="#111827"/>
+
+  <g transform="translate(630 240)">
+    <rect width="420" height="310" rx="22" fill="#111827"/>
+    <text x="34" y="62" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">VALIDATION.md</text>
+    <text x="34" y="108" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="23">definition of done</text>
+    <text x="34" y="160" fill="#D1D5DB" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="24">run: npm test</text>
+    <text x="34" y="206" fill="#D1D5DB" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="24">exists: screenshot.png</text>
+    <text x="34" y="252" fill="#D1D5DB" font-family="JetBrains Mono, SFMono-Regular, Menlo, monospace" font-size="24">run: ./review-agent.sh</text>
+  </g>
+
+  <path d="M1090 395H1176" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1176 395L1150 379V411L1176 395Z" fill="#111827"/>
+
+  <g transform="translate(1216 290)">
+    <rect width="280" height="210" rx="22" fill="#ECFDF3" stroke="#16A34A" stroke-width="4"/>
+    <text x="34" y="60" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">JUDGE</text>
+    <text x="34" y="116" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">checks</text>
+    <text x="34" y="163" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="22">commands, files, reviewers</text>
+  </g>
+
+  <g transform="translate(760 620)">
+    <rect width="270" height="108" rx="18" fill="#F0FDF4" stroke="#16A34A" stroke-width="4"/>
+    <text x="34" y="48" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Accepted</text>
+    <text x="34" y="82" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="21">claim done</text>
+  </g>
+
+  <g transform="translate(1120 620)">
+    <rect width="270" height="108" rx="18" fill="#FEF2F2" stroke="#DC2626" stroke-width="4"/>
+    <text x="34" y="48" fill="#991B1B" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Blocked</text>
+    <text x="34" y="82" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="21">keep working</text>
+  </g>
+
+  <path d="M1300 505C1240 578 1088 596 895 620" stroke="#16A34A" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M895 620L923 608L917 638L895 620Z" fill="#16A34A"/>
+
+  <path d="M1375 505C1362 574 1312 602 1255 620" stroke="#DC2626" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M1255 620L1284 608L1276 638L1255 620Z" fill="#DC2626"/>
+
+  <path d="M1120 676C840 795 520 742 330 560" stroke="#DC2626" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M330 560L360 568L338 590L330 560Z" fill="#DC2626"/>
+
+  <text x="450" y="812" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="26">If validation fails, the failed check becomes the agent's next task.</text>
+</svg>

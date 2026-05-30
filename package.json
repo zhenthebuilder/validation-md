@@ -20,6 +20,7 @@
     ".codex-plugin/",
     "hooks/",
     "skills/",
+    "docs/",
     "examples/",
     "VALIDATION.md",
     "README.md",

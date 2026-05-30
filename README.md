@@ -6,6 +6,8 @@ Agents can do a lot of work now. The weak point is acceptance: the agent says th
 task is done before the evidence is strong enough. `VALIDATION.md` is a small
 repo-local definition of done that humans and agents can both read.
 
+![Every Agent Needs a Judge](docs/assets/every-agent-needs-a-judge.svg)
+
 Default behavior is manual:
 
 ```text
@@ -46,15 +48,9 @@ thing for the agent to fix.
 
 ## Agent Support
 
-This repo can be pointed at both Claude Code and Codex.
+This repo can be used from both Claude Code and Codex.
 
 ### Claude Code
-
-Claude Code support includes:
-
-- `.claude-plugin/plugin.json`
-- `/validation` skill
-- optional Stop hook in `hooks/`
 
 Install from the repo:
 
@@ -70,8 +66,8 @@ Use it explicitly:
 /validation run
 ```
 
-Turn on hard-stop mode only for tasks where you want the agent blocked from
-claiming done until validation passes:
+Hard-stop mode is optional. Turn it on only for tasks where the agent should be
+blocked from claiming done until validation passes:
 
 ```text
 /validation hook on
@@ -80,13 +76,6 @@ claiming done until validation passes:
 ```
 
 ### Codex
-
-Codex support includes:
-
-- `.agents/plugins/marketplace.json`
-- `.codex-plugin/plugin.json`
-- the same `/validation` skill
-- the same `validation-md` CLI
 
 Point Codex at this repo as a plugin and use:
 
@@ -108,7 +97,7 @@ is the point:
 
 - the agent can draft the validation file;
 - the human can edit it;
-- a command, plugin skill, hook, or CI can enforce it.
+- a command, plugin skill, hook, or automated check can enforce it.
 
 If the acceptance criteria live in a file, they travel with the work instead of
 getting buried in chat.
@@ -144,7 +133,7 @@ Use a separate reviewer agent behind a command:
 ```yaml
 judges:
   - id: code_review
-    run: ./scripts/review-with-agent.sh
+    run: ./scripts/review-agent.sh
 ```
 
 The protocol should eventually make reviewer agents, code reviewers, and other
@@ -152,29 +141,6 @@ semantic judges easier to define directly. For now, any reviewer that can return
 a process exit code can be used as a `run` judge.
 
 See [`examples/`](examples/) for complete files.
-
-## Current Surface
-
-This first implementation supports:
-
-- `run`: command must exit `0`
-- `exists`: file or directory must exist
-- `lint-writing`: a small helper command that can be used from a `run` judge
-
-Keep the schema small. Add judges only when they catch a real premature-completion
-failure.
-
-## Repo Layout
-
-- `bin/validation-md.mjs`: CLI command router.
-- `lib/core.mjs`: validation parser, judge runner, hook-mode state.
-- `lib/writing-lint.mjs`: small writing lint used by the example pack.
-- `skills/validation/SKILL.md`: shared `/validation` skill.
-- `.claude-plugin/`: Claude Code plugin manifest.
-- `.agents/plugins/marketplace.json`: Codex marketplace manifest.
-- `.codex-plugin/`: Codex plugin manifest.
-- `hooks/`: optional Claude Code Stop hook.
-- `test/`: Node test suite.
 
 ## Status
 
