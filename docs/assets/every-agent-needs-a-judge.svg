@@ -1,93 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
-  <rect width="1600" height="900" fill="#F8F7F3"/>
-
-  <text x="80" y="110" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="850">
-    Every Agent Needs a Judge
-  </text>
-  <text x="82" y="160" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">
-    The agent can do the work. A judge decides whether it is actually done.
-  </text>
+  <rect width="1600" height="900" fill="#FBFAF7"/>
 
   <defs>
-    <marker id="arrow" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="132%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1F2937" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="13" refY="9" orient="auto">
       <path d="M0 0L18 9L0 18Z" fill="#111827"/>
     </marker>
-    <marker id="greenArrow" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
-      <path d="M0 0L18 9L0 18Z" fill="#15803D"/>
-    </marker>
-    <marker id="redArrow" markerWidth="18" markerHeight="18" refX="12" refY="9" orient="auto">
-      <path d="M0 0L18 9L0 18Z" fill="#DC2626"/>
+    <marker id="arrow-red" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14Z" fill="#C2410C"/>
     </marker>
   </defs>
 
-  <g transform="translate(90 280)">
-    <rect width="330" height="190" rx="20" fill="#EEF4FF" stroke="#2563EB" stroke-width="4"/>
-    <text x="34" y="58" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850" letter-spacing="2">
+  <text x="84" y="112" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="850">
+    Every Agent Needs a Judge
+  </text>
+  <text x="86" y="162" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">
+    The agent can do the work. It still needs someone else to say it is actually done.
+  </text>
+
+  <g transform="translate(92 270)" filter="url(#shadow)">
+    <rect width="365" height="250" rx="22" fill="#EFF6FF" stroke="#2563EB" stroke-width="4"/>
+    <text x="34" y="62" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" letter-spacing="1.6">
       WORKER AGENT
     </text>
-    <text x="34" y="115" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="850">
-      does the work
+    <text x="34" y="128" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">
+      does
     </text>
-    <text x="34" y="155" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="23">
-      edits, tests, writes
+    <text x="34" y="178" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">
+      the work
+    </text>
+    <text x="34" y="220" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="25">
+      code, docs, screenshots
     </text>
   </g>
 
-  <path d="M455 375H555" stroke="#111827" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M490 395H570" stroke="#111827" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
 
-  <g transform="translate(590 280)">
-    <rect width="420" height="190" rx="20" fill="#111827"/>
-    <text x="34" y="58" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="850">
+  <g transform="translate(604 238)" filter="url(#shadow)">
+    <rect width="430" height="315" rx="22" fill="#FFFFFF" stroke="#D6C7AD" stroke-width="3"/>
+    <rect width="430" height="76" rx="22" fill="#111827"/>
+    <path d="M0 52H430V78H0Z" fill="#111827"/>
+    <text x="34" y="50" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">
       VALIDATION.md
     </text>
-    <text x="34" y="112" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">
-      evidence + judges
+    <text x="34" y="132" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="880">
+      defines done
     </text>
-    <text x="34" y="153" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="22">
-      tests · artifacts · reviewer agents
-    </text>
+
+    <g transform="translate(34 166)">
+      <rect width="360" height="44" rx="12" fill="#F3F4F6"/>
+      <circle cx="24" cy="22" r="8" fill="#111827"/>
+      <text x="48" y="30" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="650">
+        command passes
+      </text>
+    </g>
+    <g transform="translate(34 218)">
+      <rect width="360" height="44" rx="12" fill="#F3F4F6"/>
+      <circle cx="24" cy="22" r="8" fill="#111827"/>
+      <text x="48" y="30" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="650">
+        artifact exists
+      </text>
+    </g>
+    <g transform="translate(34 270)">
+      <rect width="360" height="44" rx="12" fill="#F3F4F6"/>
+      <circle cx="24" cy="22" r="8" fill="#111827"/>
+      <text x="48" y="30" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="650">
+        reviewer signs off
+      </text>
+    </g>
   </g>
 
-  <path d="M1045 375H1145" stroke="#111827" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1068 395H1140" stroke="#111827" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
 
-  <g transform="translate(1180 280)">
-    <rect width="330" height="190" rx="20" fill="#FFF7ED" stroke="#F97316" stroke-width="4"/>
-    <text x="34" y="58" fill="#C2410C" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850" letter-spacing="2">
-      JUDGE
-    </text>
-    <text x="34" y="115" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="850">
-      checks
-    </text>
-    <text x="34" y="155" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="23">
-      accepts or blocks
-    </text>
+  <g transform="translate(1174 222)" filter="url(#shadow)">
+    <rect width="370" height="470" rx="24" fill="#FFFDF8" stroke="#7A4A2A" stroke-width="4"/>
+
+    <g transform="translate(52 36)">
+      <rect x="0" y="82" width="266" height="94" rx="14" fill="#5B351D"/>
+      <rect x="20" y="56" width="226" height="58" rx="12" fill="#7A4A2A"/>
+      <text x="133" y="123" text-anchor="middle" fill="#F8E7BE" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="2">
+        JUDGE
+      </text>
+      <text x="133" y="161" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850">
+        checks evidence
+      </text>
+      <g transform="translate(214 21) rotate(-22)">
+        <rect x="-35" y="-10" width="70" height="20" rx="7" fill="#D8A23A"/>
+        <rect x="-5" y="8" width="10" height="42" rx="4" fill="#B8842D"/>
+      </g>
+    </g>
+
+    <g transform="translate(42 254)">
+      <rect width="286" height="78" rx="16" fill="#ECFDF5" stroke="#15803D" stroke-width="4"/>
+      <text x="28" y="38" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
+        Accepted
+      </text>
+      <text x="28" y="64" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="22">
+        claim done
+      </text>
+    </g>
+
+    <g transform="translate(42 358)">
+      <rect width="286" height="78" rx="16" fill="#FFF7ED" stroke="#C2410C" stroke-width="4"/>
+      <text x="28" y="38" fill="#9A3412" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
+        Blocked
+      </text>
+      <text x="28" y="64" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="22">
+        keep working
+      </text>
+    </g>
   </g>
 
-  <path d="M1335 490C1335 555 1195 575 1030 585" stroke="#15803D" stroke-width="5" stroke-linecap="round" marker-end="url(#greenArrow)"/>
-  <path d="M1335 490C1375 590 1260 635 1088 650" stroke="#DC2626" stroke-width="5" stroke-linecap="round" marker-end="url(#redArrow)"/>
-
-  <g transform="translate(720 585)">
-    <rect width="300" height="105" rx="18" fill="#ECFDF5" stroke="#15803D" stroke-width="4"/>
-    <text x="32" y="48" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
-      Accepted
-    </text>
-    <text x="32" y="80" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="22">
-      done
-    </text>
-  </g>
-
-  <g transform="translate(1095 645)">
-    <rect width="300" height="105" rx="18" fill="#FEF2F2" stroke="#DC2626" stroke-width="4"/>
-    <text x="32" y="48" fill="#991B1B" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
-      Blocked
-    </text>
-    <text x="32" y="80" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="22">
-      keep working
-    </text>
-  </g>
-
-  <path d="M1095 700C820 790 410 745 255 500" stroke="#DC2626" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" marker-end="url(#redArrow)"/>
-  <text x="430" y="780" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="25">
-    If validation fails, the failed judge becomes the next task.
+  <path d="M1288 686C1040 790 452 786 274 550" stroke="#C2410C" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="10 14" marker-end="url(#arrow-red)"/>
+  <text x="482" y="804" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="520">
+    Failed judge becomes the next instruction.
   </text>
 </svg>
