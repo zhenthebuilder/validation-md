@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
   <rect width="1600" height="900" fill="#FAF8F3"/>
-
   <defs>
     <filter id="shadow" x="-12%" y="-14%" width="124%" height="134%">
       <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#111827" flood-opacity="0.10"/>
@@ -8,99 +7,40 @@
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
       <path d="M0 0L10 5L0 10Z" fill="#111827"/>
     </marker>
-    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+    <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#15803D"/>
+    </marker>
+    <marker id="redArrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
       <path d="M0 0L10 5L0 10Z" fill="#B42318"/>
     </marker>
   </defs>
-
-  <g transform="translate(80 230)" filter="url(#shadow)">
-    <rect width="320" height="280" rx="20" fill="#EFF6FF" stroke="#2563EB" stroke-width="4"/>
-    <text x="34" y="62" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" letter-spacing="1.4">
-      WORKER
-    </text>
-    <text x="34" y="142" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900">
-      does
-    </text>
-    <text x="34" y="200" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900">
-      the work
-    </text>
-    <text x="34" y="244" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="24">
-      code, docs, UI
-    </text>
+<g transform="translate(120 300)" filter="url(#shadow)">
+    <rect width="285" height="180" rx="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="4"/>
+    <text x="34" y="58" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" >Agent</text>
+    <text x="34" y="116" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" >does work</text>
   </g>
-
-  <path d="M430 370H480" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
-
-  <g transform="translate(510 230)" filter="url(#shadow)">
-    <rect width="360" height="280" rx="20" fill="#FFFFFF" stroke="#D6C7AD" stroke-width="3"/>
-    <rect width="360" height="76" rx="20" fill="#111827"/>
-    <path d="M0 52H360V78H0Z" fill="#111827"/>
-    <text x="30" y="50" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="850">
-      VALIDATION.md
-    </text>
-    <text x="30" y="134" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900">
-      evidence
-    </text>
-
-    <g transform="translate(30 168)">
-      <rect width="300" height="42" rx="12" fill="#F3F4F6"/>
-      <circle cx="23" cy="21" r="8" fill="#111827"/>
-      <text x="48" y="29" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="650">
-        tests pass
-      </text>
-    </g>
-    <g transform="translate(30 218)">
-      <rect width="300" height="42" rx="12" fill="#F3F4F6"/>
-      <circle cx="23" cy="21" r="8" fill="#111827"/>
-      <text x="48" y="29" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="650">
-        screenshot exists
-      </text>
+  <path d="M435 390H535" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g transform="translate(565 300)" filter="url(#shadow)">
+    <rect width="330" height="180" rx="18" fill="#FFFFFF" stroke="#D6C7AD" stroke-width="3"/>
+    <text x="34" y="58" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" >VALIDATION.md</text>
+    <text x="34" y="116" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" >defines done</text>
+  </g>
+  <path d="M925 390H1025" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g transform="translate(1055 300)" filter="url(#shadow)">
+    <rect width="235" height="180" rx="18" fill="#FFFDF8" stroke="#7A4A2A" stroke-width="4"/>
+    <text x="34" y="58" fill="#5B351D" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" >Judge</text>
+    <text x="34" y="116" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900" >checks</text>
+    <g transform="translate(166 30) rotate(-24)">
+      <rect x="-24" y="-7" width="48" height="14" rx="5" fill="#D8A23A"/>
+      <rect x="-4" y="5" width="8" height="28" rx="3" fill="#B8842D"/>
     </g>
   </g>
-
-  <path d="M900 370H950" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
-
-  <g transform="translate(980 230)" filter="url(#shadow)">
-    <rect width="260" height="280" rx="20" fill="#FFFDF8" stroke="#7A4A2A" stroke-width="4"/>
-    <g transform="translate(42 58)">
-      <rect x="0" y="74" width="176" height="80" rx="13" fill="#5B351D"/>
-      <rect x="16" y="50" width="144" height="52" rx="12" fill="#7A4A2A"/>
-      <text x="88" y="107" text-anchor="middle" fill="#F8E7BE" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="900" letter-spacing="2">
-        JUDGE
-      </text>
-      <text x="88" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="850">
-        checks
-      </text>
-      <g transform="translate(152 25) rotate(-22)">
-        <rect x="-30" y="-9" width="60" height="18" rx="6" fill="#D8A23A"/>
-        <rect x="-5" y="7" width="10" height="38" rx="4" fill="#B8842D"/>
-      </g>
-    </g>
+  <path d="M1320 390H1390" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g transform="translate(1320 300)" filter="url(#shadow)">
+    <rect width="240" height="180" rx="18" fill="#FFFFFF" stroke="#D6C7AD" stroke-width="3"/>
+    <text x="34" y="58" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" >Verdict</text>
+    <text x="34" y="112" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850" >accept</text>
+    <text x="34" y="154" fill="#9A3412" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850" >or retry</text>
   </g>
-
-  <path d="M1265 370H1285" stroke="#111827" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
-
-  <g transform="translate(1300 230)" filter="url(#shadow)">
-    <rect width="260" height="280" rx="20" fill="#FFFFFF" stroke="#D6C7AD" stroke-width="3"/>
-    <text x="30" y="62" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" letter-spacing="1.4">
-      VERDICT
-    </text>
-    <g transform="translate(30 92)">
-      <rect width="200" height="74" rx="16" fill="#ECFDF5" stroke="#15803D" stroke-width="4"/>
-      <text x="24" y="47" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
-        Accepted
-      </text>
-    </g>
-    <g transform="translate(30 186)">
-      <rect width="200" height="74" rx="16" fill="#FFF7ED" stroke="#B42318" stroke-width="4"/>
-      <text x="24" y="47" fill="#9A3412" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850">
-        Blocked
-      </text>
-    </g>
-  </g>
-
-  <path d="M1400 510V650H240V542" stroke="#B42318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 12" marker-end="url(#arrowRed)"/>
-  <text x="690" y="704" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="650">
-    retry
-  </text>
+  <path d="M1460 480V635H260V505" stroke="#B42318" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 12" marker-end="url(#redArrow)"/>
 </svg>
