@@ -60,6 +60,11 @@ judges:
 Prefer `run` and `exists` judges. Ask for a concrete artifact or command when the
 requested rule is vague.
 
+Optional judge fields (all backward-compatible): `tier: gate|audit` (the Stop hook runs
+gate-only; tag slow/LLM judges `audit` and run them via `run --full`), `egress: external`
+(skipped by `run --no-egress`), `depends_on: [ids]` (skip-not-fail until prereqs pass), and
+on `exists`: `non_empty` / `min_bytes` / `matches`. See the project README "Judge reference".
+
 For writing tasks, a useful first judge can be:
 
 ```yaml
