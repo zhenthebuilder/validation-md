@@ -1,6 +1,6 @@
 {
   "name": "validation-md",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Make done checkable with repo-local VALIDATION.md files.",
   "type": "module",
   "license": "MIT",

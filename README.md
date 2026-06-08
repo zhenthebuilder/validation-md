@@ -142,6 +142,52 @@ a process exit code can be used as a `run` judge.
 
 See [`examples/`](examples/) for complete files.
 
+## Judge reference
+
+Every judge has an `id` and one check — `run:` (passes on exit 0) or `exists:` (a file path).
+The following fields are optional and backward-compatible:
+
+```yaml
+judges:
+  # exists: with stronger checks so empty/stub files don't pass
+  - id: report
+    exists: reports/findings.md
+    non_empty: true            # must have non-whitespace content
+    min_bytes: 200             # must be at least N bytes
+    matches: "^# "             # content must match this regex
+
+  # tiering: the Stop hook runs ONLY tier:gate judges (fast); tier:audit
+  # judges (e.g. slow LLM reviewers) are skipped in the hook and run on demand.
+  - id: cheap_gate
+    run: npm test              # untagged == tier:gate (default)
+  - id: llm_review
+    tier: audit                # excluded from the hook; runs via `run --full`
+    egress: external           # sends data to a third party; skipped by --no-egress
+    depends_on: [report]       # skipped (not failed) until `report` passes
+    run: ./scripts/review-agent.sh
+```
+
+- **`tier: gate | audit`** — default `gate`. The hook runs gate-only so it stays fast;
+  run audit judges with `validation run --full` (or set `VALIDATION_MD_HOOK_FULL=1`).
+- **`egress: external`** — marks a judge that sends artifacts to a third party. `validation
+  run --no-egress` skips these (use in privacy-sensitive runs).
+- **`depends_on: [ids]`** — the judge is *skipped, not failed*, until its prerequisites pass
+  (so a slow judge never runs before its artifact exists).
+- **exists modifiers** — `non_empty`, `min_bytes`, `matches` (a regex over file contents).
+
+### Run flags
+
+```text
+validation run --gate           # only tier:gate judges (what the hook evaluates)
+validation run --full           # all judges incl. tier:audit (default for `run`)
+validation run --only a,b       # run just these judge ids
+validation run --skip c,d       # exclude these judge ids
+validation run --no-egress      # skip judges flagged egress:external
+validation run --dry-run        # list what would run, without executing
+```
+
+Skipped/planned judges never block — only a failed judge does.
+
 ## Status
 
 This is an early exploration of a small protocol for agent validation. The useful

@@ -103,3 +103,122 @@ test("plugin manifests parse as JSON", () => {
     assert.equal(typeof manifest, "object");
   }
 });
+
+test("exists honors non_empty", () => {
+  const repo = tempRepo();
+  writeFileSync(join(repo, "stub.md"), "   \n");
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: not_empty
+    exists: stub.md
+    non_empty: true
+`,
+  );
+  const result = executeValidation({ repo, file: "VALIDATION.md" });
+  assert.equal(result.decision, "blocked");
+  assert.equal(result.failed[0].id, "not_empty");
+});
+
+test("exists honors matches", () => {
+  const repo = tempRepo();
+  writeFileSync(join(repo, "doc.md"), "# Title\nbody\n");
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: has_heading
+    exists: doc.md
+    matches: "^# "
+`,
+  );
+  assert.equal(executeValidation({ repo, file: "VALIDATION.md" }).decision, "accepted");
+});
+
+test("gateOnly skips audit judges and does not block", () => {
+  const repo = tempRepo();
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: cheap
+    run: node -e "process.exit(0)"
+  - id: expensive
+    tier: audit
+    run: node -e "process.exit(1)"
+`,
+  );
+  const gate = executeValidation({ repo, file: "VALIDATION.md", gateOnly: true });
+  assert.equal(gate.decision, "accepted");
+  assert.equal(gate.skipped.find((judge) => judge.id === "expensive").status, "skipped");
+
+  const full = executeValidation({ repo, file: "VALIDATION.md" });
+  assert.equal(full.decision, "blocked");
+});
+
+test("only / skip select judges", () => {
+  const repo = tempRepo();
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: a
+    run: node -e "process.exit(1)"
+  - id: b
+    run: node -e "process.exit(0)"
+`,
+  );
+  assert.equal(executeValidation({ repo, file: "VALIDATION.md", only: ["b"] }).decision, "accepted");
+  assert.equal(executeValidation({ repo, file: "VALIDATION.md", skip: ["a"] }).decision, "accepted");
+});
+
+test("no-egress skips external judges", () => {
+  const repo = tempRepo();
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: external_judge
+    egress: external
+    run: node -e "process.exit(1)"
+`,
+  );
+  assert.equal(executeValidation({ repo, file: "VALIDATION.md", noEgress: true }).decision, "accepted");
+});
+
+test("depends_on skips dependents (not fail) when prerequisite fails", () => {
+  const repo = tempRepo();
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: prereq
+    run: node -e "process.exit(1)"
+  - id: dependent
+    depends_on: [prereq]
+    run: node -e "process.exit(0)"
+`,
+  );
+  const result = executeValidation({ repo, file: "VALIDATION.md" });
+  assert.equal(result.decision, "blocked");
+  assert.equal(result.failed.length, 1);
+  assert.equal(result.failed[0].id, "prereq");
+  assert.equal(result.judges.find((judge) => judge.id === "dependent").status, "skipped");
+});
+
+test("dry-run plans without executing or blocking", () => {
+  const repo = tempRepo();
+  writeValidation(
+    repo,
+    `goal: Ready
+judges:
+  - id: would_fail
+    run: node -e "process.exit(1)"
+`,
+  );
+  const result = executeValidation({ repo, file: "VALIDATION.md", dryRun: true });
+  assert.equal(result.decision, "dry-run");
+  assert.equal(result.judges[0].status, "planned");
+  assert.equal(result.failed.length, 0);
+});
