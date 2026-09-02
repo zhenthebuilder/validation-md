@@ -9,7 +9,7 @@
   },
   "scripts": {
     "check": "npm run check:syntax && node --test",
-    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs",
+    "check:syntax": "for f in bin/*.mjs hooks/*.mjs lib/*.mjs lib/cli/*.mjs test/*.mjs; do node --check \"$f\" || exit 1; done",
     "test": "npm run check"
   },
   "files": [
