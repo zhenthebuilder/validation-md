@@ -2,6 +2,8 @@
 
 Make "done" checkable.
 
+hello nexus
+
 Agents can do a lot of work now. The weak point is acceptance: the agent says the
 task is done before the evidence is strong enough. `VALIDATION.md` is a small
 repo-local definition of done that humans and agents can both read.
