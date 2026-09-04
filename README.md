@@ -140,7 +140,9 @@ The protocol should eventually make reviewer agents, code reviewers, and other
 semantic judges easier to define directly. For now, any reviewer that can return
 a process exit code can be used as a `run` judge.
 
-See [`examples/`](examples/) for complete files.
+See [`examples/`](examples/) for complete files and
+[`docs/reference.md`](docs/reference.md) for the full file format, CLI, and
+hook behavior.
 
 ## Status
 
@@ -152,7 +154,7 @@ Longer term, teams should be able to publish and reuse judge packs: UI review,
 code review, research review, writing voice, release readiness, and other
 definitions of done.
 
-Contributions are welcome.
+Contributions are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 

@@ -32,6 +32,12 @@ judges:
   - id: examples_documented
     exists: examples/README.md
 
+  - id: reference_docs_exist
+    exists: docs/reference.md
+
+  - id: contributing_guide_exists
+    exists: CONTRIBUTING.md
+
   - id: diagram_exists
     exists: docs/assets/every-agent-needs-a-judge.svg
 
