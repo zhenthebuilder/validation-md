@@ -9,7 +9,7 @@
   },
   "scripts": {
     "check": "npm run check:syntax && node --test",
-    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs",
+    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs && node --check ./test/writing-lint.test.mjs",
     "test": "npm run check"
   },
   "files": [
