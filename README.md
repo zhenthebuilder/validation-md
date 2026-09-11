@@ -8,6 +8,12 @@ repo-local definition of done that humans and agents can both read.
 
 ![Every Agent Needs a Judge](docs/assets/every-agent-needs-a-judge.svg)
 
+## Rendered Preview
+
+The screenshot below captures this README as rendered on GitHub:
+
+![Rendered validation-md README](docs/assets/readme-rendered-preview.png)
+
 Default behavior is manual:
 
 ```text
