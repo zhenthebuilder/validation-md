@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>validation-md demo</title>
+    <style>
+      body { font: 16px/1.5 system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; color: #1f2328; }
+      h1 { font-size: 28px; margin-bottom: 4px; }
+      p.tagline { color: #59636e; margin-top: 0; }
+      form { display: flex; gap: 8px; margin-top: 24px; }
+      input { flex: 1; padding: 8px 10px; font: inherit; border: 1px solid #d1d9e0; border-radius: 6px; }
+      button { padding: 8px 16px; font: inherit; color: #fff; background: #1f883d; border: 0; border-radius: 6px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>validation-md demo</h1>
+    <p class="tagline">Make "done" checkable.</p>
+    <form onsubmit="event.preventDefault(); document.getElementById('result').textContent = 'Saved: ' + this.task.value;">
+      <input name="task" placeholder="What does done look like?" aria-label="Definition of done" />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+  </body>
+</html>
