@@ -157,3 +157,5 @@ Contributions are welcome.
 ## License
 
 MIT
+
+Checked by the Nexus PR status test.
