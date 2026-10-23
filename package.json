@@ -8,8 +8,9 @@
     "validation-md": "./bin/validation-md.mjs"
   },
   "scripts": {
+    "demo": "node demo/server.mjs",
     "check": "npm run check:syntax && node --test",
-    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs",
+    "check:syntax": "node --check ./bin/validation-md.mjs && node --check ./hooks/validation-stop-hook.mjs && node --check ./lib/core.mjs && node --check ./lib/writing-lint.mjs && node --check ./test/validation-md.test.mjs && node --check ./demo/server.mjs",
     "test": "npm run check"
   },
   "files": [
@@ -21,6 +22,7 @@
     "hooks/",
     "skills/",
     "docs/",
+    "demo/",
     "examples/",
     "VALIDATION.md",
     "README.md",

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>validation.md — Make done checkable.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+:root{color-scheme:dark;--bg:#101211;--panel:#181b19;--line:#303630;--muted:#959e96;--green:#c1ef8a;--red:#f0a696}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#edf0e9;font:15px 'DM Sans',sans-serif}a{color:inherit;text-decoration:none}header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw}.brand{font:500 19px 'IBM Plex Mono',monospace}.brand span{color:var(--green)}.github{color:var(--muted);font-size:13px}main{max-width:1380px;margin:auto;padding:62px 5vw 30px}.eyebrow{font:12px 'IBM Plex Mono',monospace;letter-spacing:1.5px;color:var(--green)}h1{font-size:clamp(38px,5vw,66px);font-weight:500;letter-spacing:-3px;margin:17px 0}h1 span{color:var(--green)}.intro{max-width:650px;line-height:1.7;color:var(--muted);font-size:17px;margin-bottom:38px}.steps{display:flex;gap:27px;color:var(--muted);font-size:12px;margin:30px 0}.steps b{color:var(--green);margin-right:9px;font-family:monospace}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.bar{padding:19px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font:12px 'IBM Plex Mono',monospace}.subtle{color:var(--muted)}.tag{border:1px solid #434c3d;border-radius:5px;padding:4px 7px;color:var(--green);font-size:10px}pre{font:12px/1.85 'IBM Plex Mono',monospace;white-space:pre-wrap;margin:0;padding:25px;color:#bdcdb8;min-height:335px}.fixtures{padding:20px 22px;border-top:1px solid var(--line)}.fixtures h3{font-size:13px;margin:0 0 16px}.toggle{display:flex;align-items:flex-start;gap:12px;cursor:pointer;margin-top:15px;line-height:1.5}.toggle input{accent-color:var(--green);width:17px;height:17px;margin-top:3px}.toggle small{display:block;color:var(--muted);font-size:12px}.result{padding:25px}.status{display:flex;gap:14px;align-items:center;margin-bottom:24px}.symbol{width:43px;height:43px;border:1px solid #536148;border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:23px}.status h2{font-size:23px;font-weight:500;margin:0 0 6px}.status p{font-size:12px;color:var(--muted);margin:0}.judge{padding:18px 0;border-top:1px solid var(--line)}.judge-title{display:flex;align-items:center;justify-content:space-between;gap:10px;font:12px 'IBM Plex Mono',monospace}.pill{font:10px 'IBM Plex Mono',monospace;color:var(--muted)}.judge p{font-size:12px;line-height:1.6;color:var(--muted);margin-bottom:0}.log{background:#101411;border:1px solid var(--line);padding:16px;border-radius:6px;font:11px/1.8 'IBM Plex Mono',monospace;color:#9ca899;margin-top:22px;min-height:80px;white-space:pre-wrap;overflow-wrap:anywhere}.actions{display:flex;gap:10px;margin-top:24px}button{border:0;border-radius:6px;padding:13px 20px;font:600 13px 'DM Sans',sans-serif;cursor:pointer;background:var(--green);color:#1d2a14}button.secondary{background:transparent;border:1px solid var(--line);color:#cbd0c8}button:disabled{opacity:.5;cursor:wait}.footer{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted);margin:23px 0}.note{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid var(--line);padding-top:25px}.note h3{font-size:14px;font-weight:500}.note p{font-size:12px;line-height:1.7;color:var(--muted)}.failed{color:var(--red)}.passed{color:var(--green)}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-offset:4px}@media(max-width:800px){main{padding-top:35px}.workspace{grid-template-columns:1fr}.steps{gap:15px;flex-wrap:wrap}.note{grid-template-columns:1fr;gap:5px}.footer{flex-direction:column}h1{letter-spacing:-1.5px}pre{font-size:11px}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/">[<span>✓</span>] validation.md</a><a class="github" href="https://github.com/zhenthebuilder/validation-md" target="_blank" rel="noreferrer">View on GitHub ↗</a></header>
+<main>
+<div class="eyebrow">AN INTERACTIVE PROTOCOL DEMO</div>
+<h1>“Done” is a claim.<br><span>Make it checkable.</span></h1>
+<p class="intro">Give your agent a definition of done—not another reminder. Put acceptance criteria in a file, run the judges, and let the evidence decide.</p>
+<div class="steps"><span><b>01</b> Define the goal</span><span><b>02</b> Run the judges</span><span><b>03</b> Fix what’s missing</span></div>
+<div class="workspace">
+<section class="panel"><div class="bar"><span>▤ &nbsp; VALIDATION.md</span><span class="tag">REPO-LOCAL CONTRACT</span></div><pre id="definition">Loading definition…</pre>
+<div class="fixtures"><h3>Try it: a checkout change</h3><span class="subtle" style="font-size:12px">Change the demo work below. The acceptance criteria stay the same.</span>
+<label class="toggle"><input type="checkbox" id="fixed"><span>Fix the discount calculation<small>Subtract the $20 discount instead of adding it.</small></span></label>
+<label class="toggle"><input type="checkbox" id="evidence"><span>Add review evidence<small>Create review-notes.md in the temporary demo workspace.</small></span></label></div></section>
+<section class="panel"><div class="bar"><span>◉ &nbsp; JUDGE RESULTS</span><span class="tag">REAL ENGINE · LOCAL FIXTURES</span></div>
+<div class="result" aria-live="polite"><div class="status"><div class="symbol" id="symbol">→</div><div><h2 id="status">Ready for a reality check</h2><p id="subtitle">The agent says it’s done. What does the evidence say?</p></div></div>
+<div id="judges"><div class="judge"><div class="judge-title">checkout_tests_pass <span class="pill">NOT RUN</span></div><p>Run an actual assertion against the checkout calculation.</p></div><div class="judge"><div class="judge-title">review_evidence_exists <span class="pill">NOT RUN</span></div><p>Check that the required review artifact exists.</p></div></div>
+<div class="log" id="log">$ validation-md run
+Waiting for an explicit validation run.</div>
+<div class="actions"><button id="run">Run validation →</button><button class="secondary" id="reset">Reset demo</button></div>
+</div></section>
+</div>
+<div class="footer"><span>No API keys. No agent required. Real command and file-existence judges.</span><span id="count">0 validation runs</span></div>
+<div class="note"><div><h3>One file. Shared expectations.</h3><p>Humans and agents read the same definition of done. Acceptance criteria travel with the work.</p></div><div><h3>Failed judges become next steps.</h3><p>Try the broken state first, fix only the calculation, then add evidence. Both judges must pass.</p></div><div><h3>Explicit by default.</h3><p>This demo runs only when you click. Optional stop-hook enforcement is available in the Claude Code plugin.</p></div></div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let runs=0;
+fetch('/api/definition').then(r=>r.json()).then(d=>$('definition').textContent=d.markdown).catch(()=>$('definition').textContent='Could not load the definition. Refresh to retry.');
+for(const id of ['fixed','evidence'])$(id).addEventListener('change',()=>{$('subtitle').textContent='Work changed. Run validation to check the current state.'});
+$('run').onclick=async()=>{
+ $('run').disabled=true;$('status').textContent='Checking the evidence…';
+ try{
+ const response=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fixed:$('fixed').checked,evidence:$('evidence').checked})});
+ const data=await response.json();if(!response.ok)throw Error(data.error||'Validation failed to run');
+ const ok=data.decision==='accepted';$('status').textContent=ok?'Accepted. Evidence checks out.':'Blocked. Not done yet.';$('status').className=ok?'passed':'failed';$('symbol').textContent=ok?'✓':'×';
+ $('subtitle').textContent=ok?'Every judge passed. This change is ready for review.':`${data.failed.length} of ${data.judges.length} judges failed. Fix the work, not the criteria.`;
+ $('judges').replaceChildren();
+ for(const j of data.judges){const el=document.createElement('div');el.className='judge';const title=document.createElement('div');title.className='judge-title';title.textContent=j.id;const badge=document.createElement('span');badge.className='pill '+j.status;badge.textContent=j.status.toUpperCase();title.append(badge);const p=document.createElement('p');p.textContent=j.reason;el.append(title,p);$('judges').append(el)}
+ $('log').textContent='$ validation-md run\n'+data.judges.map(j=>(j.stdout||j.stderr||j.reason).trim()).join('\n')+'\n→ '+data.decision.toUpperCase();$('count').textContent=++runs+' validation run'+(runs===1?'':'');
+ }catch(e){$('status').textContent='Could not run validation';$('subtitle').textContent=e.message;}finally{$('run').disabled=false}
+};
+$('reset').onclick=()=>location.reload();
+</script>
+</body></html>
