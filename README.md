@@ -46,6 +46,15 @@ npx -y --package github:zhenthebuilder/validation-md validation-md run
 If a judge fails, the task is not done yet. The failed judge becomes the next
 thing for the agent to fix.
 
+## Interactive demo
+
+Watch the [recorded walkthrough](demo/README.md) to see validation block an
+incomplete checkout change, then accept it once both judges pass. The demo uses
+the real validation engine with isolated local fixtures.
+
+Run it from a checkout with `npm ci && npm run demo`, then open
+<http://localhost:3000>. See the [demo README](demo/README.md) for the video and steps.
+
 ## Agent Support
 
 This repo can be used from both Claude Code and Codex.

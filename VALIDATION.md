@@ -37,4 +37,16 @@ judges:
 
   - id: not_ai_writing_example_exists
     exists: examples/not-ai-writing.VALIDATION.md
+
+  - id: demo_server_exists
+    exists: demo/server.mjs
+
+  - id: demo_readme_exists
+    exists: demo/README.md
+
+  - id: demo_walkthrough_exists
+    exists: demo/assets/validation-md-walkthrough.mp4
+
+  - id: demo_poster_exists
+    exists: demo/assets/walkthrough-poster.jpg
 ```
